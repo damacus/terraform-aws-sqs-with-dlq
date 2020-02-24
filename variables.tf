@@ -61,12 +61,13 @@ variable "tags" {
 
 variable "alarm_sns_topic_arn" {
   description = "ARN of the SNS topic for alarm notifactions"
+  default     = null
 }
 
 variable "allowed_arns" {
   description = "A list of AWS account IDs allowed to access this resource"
   type        = list
-  default     = [local.account_id]
+  default     = null
 }
 
 variable "allowed_items_max" {

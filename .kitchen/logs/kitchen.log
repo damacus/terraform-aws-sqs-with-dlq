@@ -1,0 +1,8 @@
+I, [2020-02-24T10:53:47.691315 #43377]  INFO -- Kitchen: -----> Starting Test Kitchen (v2.3.4)
+I, [2020-02-24T10:53:48.953289 #43377]  INFO -- Kitchen: -----> Destroying <default-aws>...
+I, [2020-02-24T10:53:49.185625 #43377]  INFO -- Kitchen: Terraform v0.12.18
+I, [2020-02-24T10:53:49.649498 #43377]  INFO -- Kitchen: + provider.aws v2.50.0
+I, [2020-02-24T10:53:49.649604 #43377]  INFO -- Kitchen: 
+I, [2020-02-24T10:53:49.649774 #43377]  INFO -- Kitchen: Your version of Terraform is out of date! The latest version
+I, [2020-02-24T10:53:49.649826 #43377]  INFO -- Kitchen: is 0.12.21. You can update by downloading from https://www.terraform.io/downloads.html
+I, [2020-02-24T10:53:58.223302 #43377]  INFO -- Kitchen: -----> Test Kitchen is finished. (0m10.53s)
