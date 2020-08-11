@@ -1,7 +1,6 @@
 variable "name" {
   description = "This is the human-readable name of the queue. If omitted, Terraform will assign a random name."
   type        = string
-  default     = null
 }
 
 variable "message_retention_seconds" {
@@ -19,13 +18,13 @@ variable "visibility_timeout_seconds" {
 variable "fifo_queue" {
   description = "Boolean designating a FIFO queue"
   type        = bool
-  default     = null
+  default     = false
 }
 
 variable "content_based_deduplication" {
   description = "Enables content-based deduplication for FIFO queues"
   type        = bool
-  default     = null
+  default     = true
 }
 
 variable "kms_master_key_id" {
