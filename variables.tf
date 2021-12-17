@@ -24,7 +24,7 @@ variable "fifo_queue" {
 variable "content_based_deduplication" {
   description = "Enables content-based deduplication for FIFO queues"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "kms_master_key_id" {
