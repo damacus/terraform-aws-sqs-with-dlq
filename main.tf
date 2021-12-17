@@ -105,7 +105,7 @@ resource "aws_cloudwatch_metric_alarm" "deadletter_alarm" {
   statistic           = "Average"
   threshold           = 1
   treat_missing_data  = "notBreaching"
-  alarm_actions       = [aws_sns_topic.alarm.arn]
+  alarm_actions       = [ ${var.alarm_sns_topic_arn} == null ? aws_sns_topic.alarm.arn : var.alarm_sns_topic_arn ]
   tags                = tomap(var.tags)
   dimensions = {
     "QueueName" = aws_sqs_queue.deadletter_queue.name
@@ -114,4 +114,5 @@ resource "aws_cloudwatch_metric_alarm" "deadletter_alarm" {
 
 resource "aws_sns_topic" "alarm" {
   name = "${var.name}-alarm-topic"
+  count = ${var.alarm_sns_topic_arn} == null ? 1 : 0
 }
