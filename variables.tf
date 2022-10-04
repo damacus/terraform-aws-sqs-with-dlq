@@ -27,8 +27,14 @@ variable "content_based_deduplication" {
   default     = false
 }
 
-variable "kms_master_key_id" {
-  description = "The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK"
+variable "kms_master_key_id_sns" {
+  description = "The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a Customer Managed Key"
+  type        = string
+  default     = "alias/aws/sns"
+}
+
+variable "kms_master_key_id_sqs" {
+  description = "The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a Customer Managed Key"
   type        = string
   default     = "alias/aws/sqs"
 }
@@ -65,7 +71,7 @@ variable "alarm_sns_topic_arn" {
 
 variable "allowed_arns" {
   description = "A list of AWS account IDs allowed to access this resource"
-  type        = list
+  type        = list(any)
   default     = null
 }
 
