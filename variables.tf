@@ -27,13 +27,7 @@ variable "content_based_deduplication" {
   default     = false
 }
 
-variable "kms_master_key_id_sns" {
-  description = "The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK"
-  type        = string
-  default     = "alias/aws/sns"
-}
-
-variable "kms_master_key_id_sqs" {
+variable "kms_master_key_id" {
   description = "The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK"
   type        = string
   default     = "alias/aws/sqs"
