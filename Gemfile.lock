@@ -1,10 +1,7 @@
 GEM
-  specs:
-
-GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4)
+    activesupport (7.0.4.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -1484,7 +1481,7 @@ GEM
     memoist (0.16.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.16.3)
+    minitest (5.17.0)
     mixlib-config (3.0.27)
       tomlrb
     mixlib-install (3.12.20)
@@ -1754,12 +1751,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk!
-  awspec!
-  ffi!
-  kitchen-terraform!
-  kitchen-verifier-awspec!
-  rhcl!
+  aws-sdk
+  awspec
+  ffi
+  kitchen-terraform
+  kitchen-verifier-awspec
+  rhcl
 
 BUNDLED WITH
    2.3.7
